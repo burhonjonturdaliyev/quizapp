@@ -36,30 +36,15 @@ class _JavaKuchliPageState extends State<JavaKuchliPage> {
                 color: Colors.white,
               ),
               alignment: Alignment.center,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Test 1",
-                        style: TextStyle(
-                            fontSize: 23,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(onPressed: null, child: Text("Bosish")),
-                    ],
-                  )
-                ],
-              ),
+              child: Stack(children: [
+          const Center(child: Text("Hello world!")),
+          Positioned(
+              left: 50,
+              right: 50,
+              bottom: 0,
+              child:
+                  ElevatedButton(onPressed: () {}, child: const Text("Salom")))
+        ]),
             ),
             Container(
               decoration: BoxDecoration(
